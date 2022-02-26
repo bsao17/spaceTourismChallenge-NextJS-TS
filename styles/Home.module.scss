@@ -1,4 +1,10 @@
-#container {
+@import "mixins/responsive-mobiles";
+@import "mixins/responsive-tablets";
+
+@include responsive-tablet-home;
+@include responsive-mobile-home;
+
+.container {
   width: 100vw;
   height: 100vh;
   background-image: url("../public/assets/home/background-home-desktop.jpg");

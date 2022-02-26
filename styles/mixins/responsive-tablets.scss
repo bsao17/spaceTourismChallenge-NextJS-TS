@@ -1,6 +1,11 @@
 @mixin responsive-tablet-home {
-  @media screen and ( max-width: 768px ) {
-
+  @media screen and ( max-width: 769px ) {
+    .container {
+      width: 100vw !important;
+      height: 100vh !important;
+      background-image: url("../../public/assets/home/background-home-tablet.jpg")!important;
+      background-size: cover!important;
+    }
   }
 }
 
