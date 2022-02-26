@@ -36,7 +36,7 @@ export const data: object = {
                 "png": "./assets/destination/image-titan.png",
                 "webp": "./assets/destination/image-titan.webp"
             },
-            "description": "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
+            "description": "The only moon known to have a dense atmosphere other than Earth, Titan is a destination away from destination (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
             "distance": "1.6 bil. km",
             "travel": "7 years"
         }
