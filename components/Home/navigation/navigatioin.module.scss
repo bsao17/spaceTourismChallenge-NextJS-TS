@@ -8,7 +8,8 @@ $blueLight: #D0D6F9;
   top: 0;
   right: 0;
   margin: 5%;
-
+  color: white;
+  font-weight: 900;
 }
 .container {
   display: flex;
@@ -35,7 +36,7 @@ $blueLight: #D0D6F9;
 }
 
 .logo {
-  margin: 50%;
+
 }
 
 .menu {
@@ -48,6 +49,7 @@ $blueLight: #D0D6F9;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-left: 20px;
   align-items: center;
 }
 
