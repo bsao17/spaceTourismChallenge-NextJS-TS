@@ -1,17 +1,67 @@
+// Variable color
+$white: #FFFFFF;
+$blackNight: #0B0D17;
+$blueLight: #D0D6F9;
+
+.closedMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 5%;
+
+}
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+  height: 100px;
+  background: transparent;
+
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-right: 50px;
+  align-items: start;
+  width: 100%;
+  height: 100vh;
+  color: $white;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.logo {
+  margin: 50%;
+}
+
+.menu {
+  z-index: 20;
+}
+
+.sidebar {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 100px;
-  background: transparent;
 }
 
-.logo {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #fff;
-  margin: 10%;
+.verticalMenu {
+  box-sizing: content-box;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(81.5485px);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
