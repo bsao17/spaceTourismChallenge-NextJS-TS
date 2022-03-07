@@ -1,16 +1,24 @@
-import React, {useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import Image from "next/image"
 import styles from "./navigatioin.module.scss"
 import {GiHamburgerMenu} from "react-icons/Gi";
+import {gsap} from "gsap";
 
 interface props {
 }
 
-const hiddenMenu: Object = {width: "0"}
-const visibleMenu: Object = {width: "50%"}
-
 const Navigation = (props: props) => {
-    const [openMenu, setOpenMenu] = useState<boolean>(false)
+
+    const [openMenu, setOpenMenu] = useState<boolean>(true)
+    const boxRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        if (openMenu) {
+            gsap.to(boxRef.current, {translateX: "100%", width: "0"})
+        } else {
+            gsap.to(boxRef.current, {translateX: "50%", width: "100%"})
+        }
+    }, [openMenu])
 
     return (
         <div className={styles.container}>
@@ -22,21 +30,19 @@ const Navigation = (props: props) => {
                 }} style={{color: "white", fontSize: "2rem", margin: "5%"}}/>
             </div>
             {/* Vertical navigation menu */}
-            <div className={styles.verticalMenu} style={openMenu ? visibleMenu : hiddenMenu}>
+            <div ref={boxRef} className={styles.verticalMenu}>
                 <button className={styles.closedMenu}
                         style={openMenu ? {
-                            transform: "translateX(-100%)",
                             color: "white",
                             fontSize: "1.5rem",
                             fontFamily: "arial",
                             zIndex: "10"
                         } : {transform: "translateX(500%)"}}
                         onClick={() => {
-                            setOpenMenu(false)
+                            setOpenMenu(!openMenu)
                         }}>X
                 </button>
-                <div className={styles.menu}
-                     style={openMenu ? {transform: "translateX(0)"} : {transform: "translateX(500%)"}}>
+                <div className={styles.menu}>
                     <ul className={styles.links}>
                         <li><a>Destination</a></li>
                         <li><a href="">Crew</a></li>

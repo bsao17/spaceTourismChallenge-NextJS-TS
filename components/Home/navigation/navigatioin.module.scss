@@ -35,10 +35,6 @@ $blueLight: #D0D6F9;
   font-size: 1.5rem;
 }
 
-.logo {
-
-}
-
 .menu {
   z-index: 20;
 }
@@ -56,7 +52,7 @@ $blueLight: #D0D6F9;
 .verticalMenu {
   box-sizing: content-box;
   height: 100%;
-  width: 0;
+  width: 0%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -64,6 +60,6 @@ $blueLight: #D0D6F9;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(81.5485px);
   overflow-x: hidden;
-  transition: 0.5s;
   padding-top: 60px;
+  //transform: translateX(100%);
 }
