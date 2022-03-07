@@ -5,41 +5,44 @@ $blueLight: #D0D6F9;
 
 .closedMenu {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 15px;
+  right: 30%;
   margin: 5%;
-  color: white;
-  font-weight: 900;
+  font-size: 1.5rem;
+  color: #FFFFFF;
 }
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: end;
   width: 100%;
   height: 100px;
   background: transparent;
-
 }
-
-.links {
+.links_wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  margin-right: 50px;
+  justify-content: space-between;
   align-items: start;
-  width: 100%;
-  height: 100vh;
   color: $white;
-  font-weight: 900;
-  font-size: 1.5rem;
+  font-size: 16px;
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 5px;
+  margin-top: 13%;
+  .link {
+    font-style: normal;
+    line-height: 50px;
+    cursor: pointer;
+  }
+  .linkNumber {
+    font-size: 16px;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin: 20px;
+    letter-spacing: 5px;
+  }
 }
-
-.menu {
-  z-index: 20;
-}
-
-.sidebar {
+.topSidebar {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -48,11 +51,10 @@ $blueLight: #D0D6F9;
   padding-left: 20px;
   align-items: center;
 }
-
-.verticalMenu {
+.verticalMenuWrapper {
   box-sizing: content-box;
   height: 100%;
-  width: 0%;
+  width: 0;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -61,5 +63,4 @@ $blueLight: #D0D6F9;
   backdrop-filter: blur(81.5485px);
   overflow-x: hidden;
   padding-top: 60px;
-  //transform: translateX(100%);
 }

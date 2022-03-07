@@ -3,6 +3,7 @@ import Image from "next/image"
 import styles from "./navigatioin.module.scss"
 import {GiHamburgerMenu} from "react-icons/Gi";
 import {gsap} from "gsap";
+import {AiOutlineClose} from "react-icons/Ai"
 
 interface props {
 }
@@ -16,37 +17,32 @@ const Navigation = (props: props) => {
         if (openMenu) {
             gsap.to(boxRef.current, {translateX: "100%", width: "0"})
         } else {
-            gsap.to(boxRef.current, {translateX: "50%", width: "100%"})
+            gsap.to(boxRef.current, {translateX: "30%", width: "100%"})
         }
     }, [openMenu])
 
     return (
         <div className={styles.container}>
             {/* Top sidebar navigation */}
-            <div className={styles.sidebar}>
+            <div className={styles.topSidebar}>
                 <Image src={"/assets/logo.png"} className={styles.logo} width={40} height={40} alt="logo"/>
                 <GiHamburgerMenu onClick={() => {
                     setOpenMenu(!openMenu)
                 }} style={{color: "white", fontSize: "2rem", margin: "5%"}}/>
             </div>
             {/* Vertical navigation menu */}
-            <div ref={boxRef} className={styles.verticalMenu}>
+            <div ref={boxRef} className={styles.verticalMenuWrapper}>
                 <button className={styles.closedMenu}
-                        style={openMenu ? {
-                            color: "white",
-                            fontSize: "1.5rem",
-                            fontFamily: "arial",
-                            zIndex: "10"
-                        } : {transform: "translateX(500%)"}}
                         onClick={() => {
                             setOpenMenu(!openMenu)
-                        }}>X
+                        }}><AiOutlineClose/>
                 </button>
-                <div className={styles.menu}>
-                    <ul className={styles.links}>
-                        <li><a>Destination</a></li>
-                        <li><a href="">Crew</a></li>
-                        <li><a href="">Technology</a></li>
+                <div>
+                    <ul className={styles.links_wrapper}>
+                        <li className={styles.link}><span className={styles.linkNumber}>00</span><a>HOME</a></li>
+                        <li className={styles.link}><span className={styles.linkNumber}>01</span><a>DESTINATION</a></li>
+                        <li className={styles.link}><span className={styles.linkNumber}>02</span><a>CREW</a></li>
+                        <li className={styles.link}><span className={styles.linkNumber}>03</span><a>TECHNOLOGY</a></li>
                     </ul>
                 </div>
             </div>
