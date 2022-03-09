@@ -5,18 +5,14 @@
     .hamburgerButton {
       display: none !important;
     }
+    .closedMenu {
+      display: none !important;
+    }
     .links_wrapper {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      color: $white;
-      font-size: 16px;
-      font-family: 'Barlow Condensed', sans-serif;
-      letter-spacing: 5px;
-      margin-top: 13%;
-      width: 100% !important;
-      transform: translateX(-100%) !important;
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: space-between !important;
+      align-items: center !important;
       .link {
         font-style: normal;
         line-height: 50px;
@@ -59,6 +55,9 @@
 @mixin navigation_desktop {
   @media screen and (min-width: 820px) {
     .hamburgerButton {
+      display: none !important;
+    }
+    .closedMenu {
       display: none !important;
     }
     .links_wrapper {

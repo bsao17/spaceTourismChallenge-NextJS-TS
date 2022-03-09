@@ -26,25 +26,39 @@ const Navigation = (props: props) => {
             {/* Top sidebar navigation */}
             <div className={styles.topSidebar}>
                 <Image src={"/assets/logo.png"} className={styles.logo} width={40} height={40} alt="logo"/>
-                <GiHamburgerMenu className={styles.hamburgerButton} onClick={() => {
+                <label htmlFor="hamburgerButton"/>
+                <GiHamburgerMenu className={styles.hamburgerButton} id={"hamburgerButton"} onClick={() => {
                     setOpenMenu(!openMenu)
                 }} style={{color: "white", fontSize: "2rem", margin: "5%"}}/>
             </div>
             {/* Vertical navigation menu */}
             <div ref={boxRef} className={styles.verticalMenuWrapper}>
+
                 <button className={styles.closedMenu}
                         onClick={() => {
                             setOpenMenu(!openMenu)
                         }}><AiOutlineClose/>
                 </button>
-                <div>
-                    <ul className={styles.links_wrapper}>
-                        <li className={styles.link}><span className={styles.linkNumber}>00</span><a>HOME</a></li>
-                        <li className={styles.link}><span className={styles.linkNumber}>01</span><a>DESTINATION</a></li>
-                        <li className={styles.link}><span className={styles.linkNumber}>02</span><a>CREW</a></li>
-                        <li className={styles.link}><span className={styles.linkNumber}>03</span><a>TECHNOLOGY</a></li>
-                    </ul>
-                </div>
+
+                <ul className={styles.links_wrapper}>
+                    <li className={styles.link}>
+                        <span className={styles.linkNumber}>00</span>
+                        <a>HOME</a>
+                    </li>
+                    <li className={styles.link}>
+                        <span className={styles.linkNumber}>01</span>
+                        <a>DESTINATION</a>
+                    </li>
+                    <li className={styles.link}>
+                        <span className={styles.linkNumber}>02</span>
+                        <a>CREW</a>
+                    </li>
+                    <li className={styles.link}>
+                        <span className={styles.linkNumber}>03</span>
+                        <a>TECHNOLOGY</a>
+                    </li>
+                </ul>
+
             </div>
         </div>
     )
