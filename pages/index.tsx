@@ -9,7 +9,7 @@ const Home: NextPage = () => {
         <div className={styles.container}>
             <div id={styles.navigation}>
                 <Navigation/>
-
+                <h1 className={styles.spaceTitle} >SPACE</h1>
             </div>
         </div>
     )

@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from "react";
 import Image from "next/image"
-import styles from "./navigatioin.module.scss"
+import styles from "./navigation.module.scss"
 import {GiHamburgerMenu} from "react-icons/Gi";
 import {gsap} from "gsap";
 import {AiOutlineClose} from "react-icons/Ai"
@@ -26,7 +26,7 @@ const Navigation = (props: props) => {
             {/* Top sidebar navigation */}
             <div className={styles.topSidebar}>
                 <Image src={"/assets/logo.png"} className={styles.logo} width={40} height={40} alt="logo"/>
-                <GiHamburgerMenu onClick={() => {
+                <GiHamburgerMenu className={styles.hamburgerButton} onClick={() => {
                     setOpenMenu(!openMenu)
                 }} style={{color: "white", fontSize: "2rem", margin: "5%"}}/>
             </div>

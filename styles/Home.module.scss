@@ -13,18 +13,24 @@
   height: 100vh;
   background-image: url("../public/assets/home/background-home-desktop.jpg");
   background-size: cover;
+  #navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  #text {
+    font-family: 'Bellefair', serif;
+    font-size: 100px;
+    color: white;
+  }
+
+  .spaceTitle {
+    color: white;
+    text-align: center;
+    font-size: 500%;
+    font-weight: lighter;
+  }
 }
 
-#navigation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-#text {
-  font-family: 'Bellefair', serif;
-  font-size: 100px;
-  color: white;
-
-}
