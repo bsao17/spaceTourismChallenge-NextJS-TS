@@ -1,5 +1,5 @@
 @mixin responsive-tablet-home {
-  @media screen and ( max-width: 820px ) {
+  @media screen and ( max-width: 1100px ) {
     .container {
       width: 100vw !important;
       height: 100vh !important;

@@ -23,6 +23,7 @@ const Navigation = (props: props) => {
 
     return (
         <div className={styles.container}>
+
             {/* Top sidebar navigation */}
             <div className={styles.topSidebar}>
                 <Image src={"/assets/logo.png"} className={styles.logo} width={40} height={40} alt="logo"/>
@@ -31,6 +32,7 @@ const Navigation = (props: props) => {
                     setOpenMenu(!openMenu)
                 }} style={{color: "white", fontSize: "2rem", margin: "5%"}}/>
             </div>
+
             {/* Vertical navigation menu */}
             <div ref={boxRef} className={styles.verticalMenuWrapper}>
 
@@ -39,7 +41,6 @@ const Navigation = (props: props) => {
                             setOpenMenu(!openMenu)
                         }}><AiOutlineClose/>
                 </button>
-
                 <ul className={styles.links_wrapper}>
                     <li className={styles.link}>
                         <span className={styles.linkNumber}>00</span>

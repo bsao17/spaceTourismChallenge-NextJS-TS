@@ -4,6 +4,11 @@
 @include responsive-tablet-home;
 @include responsive-mobile-home;
 
+// Variables
+$white: #FFFFFF;
+$blackNight: #0B0D17;
+$blueLight: #D0D6F9;
+
 .container {
   display: flex;
   flex-direction: column;
@@ -19,18 +24,71 @@
     left: 0;
     width: 100%;
   }
-
-  #text {
-    font-family: 'Bellefair', serif;
-    font-size: 100px;
-    color: white;
-  }
-
-  .spaceTitle {
-    color: white;
-    text-align: center;
-    font-size: 500%;
-    font-weight: lighter;
+  .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .bodyText {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      #introduction {
+        color: $blueLight;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        font-family: 'Barlow Condensed', sans-serif;
+        letter-spacing: 2.7px;
+        line-height: 19px;
+        padding-left: 0;
+        text-transform: uppercase;
+      }
+      .spaceTitle {
+        color: white;
+        text-align: center;
+        font-size: 80px;
+        font-weight: lighter;
+        line-height: 125%;
+        padding: 16px 0;
+      }
+      #paragraph {
+        color: $blueLight;
+        text-align: center;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        width: 327px;
+        line-height: 25px;
+        padding: 0;
+        letter-spacing: 2px;
+        box-sizing: border-box;
+        margin: 0;
+      }
+    }
+    .hoverCircle {
+      width: 334px;
+      height: 334px;
+      background-color: transparent;
+      border-radius: 50%;
+      .whiteCircle {
+        display: block;
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        background-color: #fff;
+        border-radius: 50%;
+        .textCircle {
+          color: black;
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 20px;
+          letter-spacing: 2px;
+        }
+      }
+    }
   }
 }
 

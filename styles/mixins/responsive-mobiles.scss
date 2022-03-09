@@ -1,5 +1,5 @@
 @mixin responsive-mobile-home {
-  @media (max-width: 378px) {
+  @media (max-width: 560px) {
     .container {
       position: fixed!important;
       top: 0!important;
