@@ -34,7 +34,7 @@ const Navigation = (props: props) => {
             </div>
 
             {/* Vertical navigation menu */}
-            <div ref={boxRef} className={styles.verticalMenuWrapper}>
+            <nav ref={boxRef} className={styles.verticalMenuWrapper}>
 
                 <button className={styles.closedMenu}
                         onClick={() => {
@@ -60,7 +60,7 @@ const Navigation = (props: props) => {
                     </li>
                 </ul>
 
-            </div>
+            </nav>
         </div>
     )
 }
