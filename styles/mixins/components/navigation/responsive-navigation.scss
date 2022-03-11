@@ -45,14 +45,15 @@
       justify-content: space-around !important;
       align-items: center !important;
       margin: auto !important;
-      height: 100px !important;
+      height: 50px !important;
     }
     .verticalMenuWrapper {
       box-sizing: content-box;
       width: 60% !important;
       transform: translateX(0)!important;
       padding-top: 0 !important;
-      height: 100px !important;
+      height: 50px !important;
+      margin-top: 25px;
     }
   }
 }
