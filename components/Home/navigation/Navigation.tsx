@@ -27,10 +27,13 @@ const Navigation = (props: props) => {
             {/* Top sidebar navigation */}
             <div className={styles.topSidebar}>
                 <Image src={"/assets/logo.png"} className={styles.logo} width={40} height={40} alt="logo"/>
-                <label htmlFor="hamburgerButton"/>
-                <GiHamburgerMenu className={styles.hamburgerButton} id={"hamburgerButton"} onClick={() => {
+                <button className={styles.hamburgerButton} id={"hamburgerButton"} onClick={() => {
                     setOpenMenu(!openMenu)
-                }} style={{color: "white", fontSize: "2rem", margin: "5%"}}/>
+                }} style={{color: "white", fontSize: "2rem", margin: "5%"}}>
+                    <div className={styles.hamburgerLine}/>
+                    <div className={styles.hamburgerLine}/>
+                    <div className={styles.hamburgerLine}/>
+                </button>
             </div>
 
             {/* Vertical navigation menu */}

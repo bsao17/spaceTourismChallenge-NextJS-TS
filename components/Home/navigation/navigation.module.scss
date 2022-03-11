@@ -61,6 +61,14 @@ $blueLight: #D0D6F9;
   align-items: center;
   padding-left: 25px;
   padding-top: 15px;
+  .hamburgerLine {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+  }
+  .hamburgerLine:nth-child(2){
+    margin: 5px 0;
+  }
 }
 .verticalMenuWrapper {
   box-sizing: content-box;
