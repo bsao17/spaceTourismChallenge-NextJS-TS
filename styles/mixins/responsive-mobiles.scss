@@ -1,3 +1,8 @@
+// Variables
+$white: #FFFFFF;
+$blackNight: #0B0D17;
+$blueLight: #D0D6F9;
+
 @mixin responsive-mobile-home {
   @media (max-width: 560px) {
     .container {
@@ -8,6 +13,10 @@
       max-height: 100vh !important;
       background-image: url("../../public/assets/home/background-home-mobile.jpg")!important;
       background-size: cover!important;
+      .body {
+        display: flex!important;
+        flex-direction: column!important;
+      }
     }
   }
 }
