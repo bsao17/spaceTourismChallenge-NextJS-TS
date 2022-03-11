@@ -5,6 +5,13 @@
       height: 100vh !important;
       background-image: url("../../public/assets/home/background-home-tablet.jpg")!important;
       background-size: cover!important;
+      .body {
+        height: 100vh !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
     }
   }
 }
