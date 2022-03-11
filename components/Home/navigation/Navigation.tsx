@@ -1,9 +1,7 @@
 import React, {useEffect, useRef, useState} from "react";
 import Image from "next/image"
 import styles from "./navigation.module.scss"
-import {GiHamburgerMenu} from "react-icons/Gi";
 import {gsap} from "gsap";
-import {AiOutlineClose} from "react-icons/Ai"
 
 interface props {
 }
@@ -42,7 +40,7 @@ const Navigation = (props: props) => {
                 <button className={styles.closedMenu}
                         onClick={() => {
                             setOpenMenu(!openMenu)
-                        }}><AiOutlineClose/>
+                        }}>X
                 </button>
                 <ul className={styles.links_wrapper}>
                     <li className={styles.link}>
